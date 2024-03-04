@@ -2,7 +2,7 @@
 
 using namespace std;
 
-int square(int num);
+
 
 int main(){
 
@@ -11,6 +11,4 @@ int main(){
 }
 
 
-int square(int num){
-    return num * num;
-}
+
