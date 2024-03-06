@@ -2,9 +2,10 @@
 
 using namespace std;
 
-bool checkIfOdd(int input);
+int fib(int iterations); //returns the fibonacci number for the given index
 
 int main(){
+
 
     
 
@@ -12,7 +13,15 @@ int main(){
 }
 
 
+int fib(int iterations){
+    int x = 0;
+    int y = 1; 
+    int temp;
 
-bool checkIfOdd(int input){
-    return (input % 2)? true : false;
+    for (int i = 0; i < iterations; i++){
+        temp = x;
+        x += y; 
+        y = temp;
+    }
+    return x;
 }
