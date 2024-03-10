@@ -12,7 +12,12 @@ class Complex{
     Complex(double real, double im){
         this->real = real;
         this->im = im;
-        this->dir = atan(im / real) * 180 / M_PI;
+        if (this->im){
+            this->dir = atan(im / real) * 180 / M_PI;
+        }
+        else{
+            this->dir = 0;
+        }
         this->mag = sqrt(pow(real, 2) + pow(im, 2));
     }
     void dispRect();
